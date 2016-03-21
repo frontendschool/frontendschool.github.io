@@ -21,7 +21,7 @@ $(document).ready(function () {
 		var found = 0;
 		for (var i = 0; i < data.articles.length; i++) {
 			if (data.articles[i].id == id) {
-	    		var source = '<div class="block post"><img src="{{img-link}}" alt="" class="img-responsive"><h1>{{title}}</h1><p>{{full}}</p><p class="tags">Теги: {{#each tags}} {{tag-name}} {{/each}} .</p></div>';
+	    		var source = '<div class="block post"><img src="{{img-link}}" alt="" class="img-responsive"><h1>{{title}}</h1>{{full}}<p class="tags">Теги: {{#each tags}} {{tag-name}} {{/each}} .</p></div>';
 				var template = Handlebars.compile(source);
 				var html = template(data.articles[i]);
 				posts.append(html);
